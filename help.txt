@@ -1,0 +1,12 @@
+//// INFO ////
+
+Database instruction:
+1.- run terminal in BD folder
+2.- run command: 'docker-compose up'
+    'docker-compose up -d' if you dont want terminal status
+3.- go to 'localhost:5050' in web browser
+4.- fill the fields requested with the following:
+    user/email: admin@admin.com
+    password: root
+    NOTE: YOU CAN REPLACE THIS CREDENTIALS IN Docker-compose.yaml file
+5.- To close containers run command: 'docker-compose down'

@@ -1,0 +1,7 @@
+ pip install alembic
+ alembic init alembi
+ alembic revision -m 'init' 
+ alembic upgrade head
+ para crearnuevas revisiones usar 
+ alembic revision -m 'Mensaje cualquiera' #sirve para agregar mas tablas o eleimir tablas
+ 
