@@ -1,5 +1,6 @@
  pip install alembic
  alembic init alembi
+ abrir alembic.ini, ir a la linea 53 y reemplazar por sqlalchemy.url = postgresql://root:root@172.18.0.3:5432/test_db
  alembic revision -m 'init' 
  alembic upgrade head
  para crear nuevas revisiones usar 
