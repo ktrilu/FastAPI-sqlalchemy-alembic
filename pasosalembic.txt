@@ -2,6 +2,6 @@
  alembic init alembi
  alembic revision -m 'init' 
  alembic upgrade head
- para crearnuevas revisiones usar 
- alembic revision -m 'Mensaje cualquiera' #sirve para agregar mas tablas o eleimir tablas
+ para crear nuevas revisiones usar 
+ alembic revision -m 'Mensaje cualquiera' #sirve para agregar tablas o eliminar tablas, siendo necesario ejecutar alembic upgrade head para realizar los cambios
  

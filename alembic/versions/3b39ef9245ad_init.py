@@ -29,11 +29,6 @@ def upgrade():
         sa.Column('description', sa.String, nullable=True),
     )
 
-    op.create_table(
-        'Empresas',
-        sa.Column('id', sa.Integer, primary_key=True),
-        sa.Column('name', sa.String, nullable=True)
-    )
 
 def downgrade():
     op.drop_table('Productos')

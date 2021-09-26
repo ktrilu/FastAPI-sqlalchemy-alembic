@@ -7,11 +7,11 @@ from models import Producto, Empresa
 app = FastAPI()
 
 
-@app.post("/a/")
-def create(details_product: ingresar_producto, db: Session = Depends(get_db)):
+@app.post("/a/{itemname}/{itemdesc}")
+def create(itemname,itemdesc, db: Session = Depends(get_db)):
     to_create = Producto(
-        name=details_product.name,
-        description=details_product.description
+        name=itemname,
+        description=itemdesc
     )
     db.add(to_create)
     db.commit()
@@ -20,10 +20,10 @@ def create(details_product: ingresar_producto, db: Session = Depends(get_db)):
         "created_id": to_create.id
     }
 
-@app.post("/b/")
-def create(details_empresa: ingresar_empresa, db: Session = Depends(get_db)):
+@app.post("/b/{itemname}")
+def create(itemname, db: Session = Depends(get_db)):
     to_create_empresa = Empresa(
-        name=details_empresa.name
+        name=itemname
     )
     db.add(to_create_empresa)
     db.commit()
